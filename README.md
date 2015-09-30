@@ -39,5 +39,12 @@ docker run -p 5000:5000 -d docker-bp
 ea7ba1b128312ec5f5ce853d3642f3faee08191ff4b0694ca729c4e1ec7567bc
 ```
 
+The `.dockerignore` file exludes some assets from being copied and used during Docker image build. Here is what is listed from container's console:
+```
+# ls -a
+.  ..  Startup.cs  hosting.ini	project.json  project.lock.json  wwwroot
+```
+The `project.lock.json` is a file created within container - the exclusion rules prevent your host machine `project.lock.json` from being moved to container.
+
 ## Author
 @peterblazejewicz
