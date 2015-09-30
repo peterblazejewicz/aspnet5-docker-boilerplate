@@ -1,0 +1,6 @@
+.dockerignore
+.gitignore
+.git/
+bin/
+Dockerfile
+project.lock.json
